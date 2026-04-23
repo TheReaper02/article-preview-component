@@ -1,0 +1,331 @@
+    *, *::before, *::after { 
+        box-sizing: border-box;
+         margin: 0; 
+         padding: 0; 
+        }
+ 
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e8edf4;
+      font-family: 'Manrope', sans-serif;
+      padding: 2rem;
+    }
+ 
+    
+    .card {
+      display: flex;
+      flex-direction: row;
+      background: #fff;
+      border-radius: 20px;
+      overflow: visible;
+      max-width: 730px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      position: relative;
+    }
+ 
+    
+    .card__image {
+      flex: 0 0 280px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+ 
+    .card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+ 
+    
+    .card__content {
+      flex: 1;
+      padding: 2rem 2rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+ 
+    .card__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #3d4f6e;
+      line-height: 1.45;
+      margin-bottom: 0.85rem;
+    }
+ 
+    .card__excerpt {
+      font-size: 0.82rem;
+      color: #9aacbf;
+      line-height: 1.65;
+      flex: 1;
+    }
+ 
+    
+    .card__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
+ 
+    .author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+ 
+    .author__avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+ 
+    .author__name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #3d4f6e;
+    }
+ 
+    .author__date {
+      font-size: 0.75rem;
+      color: #9aacbf;
+      margin-top: 2px;
+    }
+ 
+    
+    .share-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #eceff4;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+      position: relative;
+      flex-shrink: 0;
+    }
+ 
+    .share-btn:hover {
+      background: #6b7fa3;
+    }
+ 
+    .share-btn:hover img {
+      filter: brightness(0) invert(1);
+    }
+ 
+    .share-btn:hover svg path {
+      fill: #fff;
+    }
+ 
+    .share-btn img {
+      width: 18px;
+      height: 18px;
+      transition: filter 0.2s;
+    }
+ 
+    .share-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+ 
+    .share-btn svg path {
+      fill: #9aacbf;
+      transition: fill 0.2s;
+    }
+ 
+    
+    .share-tooltip {
+      position: absolute;
+      right: 0;
+      bottom: calc(100% + 14px);
+      background: #6b7fa3;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.7rem 1.2rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 0.25s, transform 0.25s;
+    }
+ 
+    
+    .share-tooltip::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      right: 14px;
+      border-width: 8px 8px 0;
+      border-style: solid;
+      border-color: #6b7fa3 transparent transparent;
+    }
+ 
+    .share-tooltip.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+ 
+    .share-tooltip span {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+ 
+    .share-tooltip a {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+ 
+    .share-tooltip a:hover { opacity: 0.75; }
+ 
+    .share-tooltip a img {
+      width: 20px;
+      height: 20px;
+    }
+ 
+    .mobile-share-bar .icons a img {
+      width: 20px;
+      height: 20px;
+    }
+ 
+    .share-tooltip svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+ 
+    
+    .mobile-share-bar { 
+        display: none !important; 
+    }
+
+    .card__meta--mobile { 
+        display: none !important; 
+    }
+
+    .attribution {
+        position: fixed;
+        bottom: 1rem;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 0.75rem;
+        color: #9aacbf;
+    }
+
+    .attribution a {
+        color: #6b7fa3;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .attribution a:hover {
+        text-decoration: underline;
+    }
+ 
+    
+    @media (max-width: 600px) {
+      body { padding: 1.2rem; align-items: flex-start; padding-top: 3rem; }
+ 
+      .card {
+        flex-direction: column;
+        max-width: 380px;
+        border-radius: 16px;
+        overflow: hidden; 
+      }
+ 
+      .card__image {
+        flex: none;
+        height: 200px;
+        border-radius: 0;
+      }
+ 
+      .card__content {
+        padding: 1.4rem 1.4rem 0;
+      }
+ 
+      
+      .card__meta { display: none; }
+ 
+      
+      .mobile-share-bar {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        background: #6b7fa3;
+        padding: 0.9rem 1.4rem;
+        margin-top: 1.4rem;
+      }
+ 
+      .mobile-share-bar span {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        color: #fff;
+        text-transform: uppercase;
+      }
+ 
+      .mobile-share-bar .icons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+ 
+      .mobile-share-bar a svg {
+        fill: #fff;
+        width: 20px;
+        height: 20px;
+      }
+ 
+      .mobile-share-bar .share-btn-mobile {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.2);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+ 
+      .mobile-share-bar .share-btn-mobile img {
+      width: 18px;
+      height: 18px;
+    }
+ 
+    .mobile-share-bar .share-btn-mobile svg path {
+        fill: #fff;
+      }
+ 
+      
+      .card__meta--mobile {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1.2rem;
+      }
+
+      .attribution {
+        font-size: 0.7rem;
+        bottom: 0.75rem;
+        padding: 0 1rem;
+      }
+    }

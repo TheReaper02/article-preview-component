@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet"/>
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+</head>
+<body>
+
+<article class="card">
+ 
+  
+  <div class="card__image">
+    <img src="../images/drawers.jpg" alt="Drawers">
+  </div>
+ 
+  
+  <div class="card__content">
+ 
+    <div>
+      <h2 class="card__title">
+        Shift the overall look and feel by adding these wonderful touches to furniture in your home
+      </h2>
+      <p class="card__excerpt">
+        Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
+      </p>
+    </div>
+ 
+    
+    <div class="card__meta">
+      <div class="author">
+        <img class="author__avatar" src="../images/avatar-michelle.jpg" alt="Michelle Appleton">
+        <div>
+          <div class="author__name">Michelle Appleton</div>
+          <div class="author__date">28 Jun 2020</div>
+        </div>
+      </div>
+ 
+      
+      <div style="position:relative;">
+        <button class="share-btn" id="shareBtn" aria-label="Share">
+          <img src="./images/icon-share.svg" alt="Share Icon">
+        </button>
+ 
+        
+        <div class="share-tooltip" id="shareTooltip">
+          <span>Share</span>
+ 
+          
+          <a href="#" aria-label="Share on Facebook">
+            <img src="./images/icon-facebook.svg" alt="Facebook">
+          </a>
+ 
+          
+          <a href="#" aria-label="Share on Twitter">
+            <img src="./images/icon-twitter.svg" alt="Twitter">
+          </a>
+ 
+          
+          <a href="#" aria-label="Share on Pinterest">
+            <img src="./images/icon-pinterest.svg" alt="Pinterest">
+          </a>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Mobile: author row (shown only on mobile) -->
+    <div class="card__meta--mobile">
+      <div class="author">
+        <img
+          class="author__avatar" src="../images/avatar-michelle.jpg" alt="Michelle Appleton">
+        <div>
+          <div class="author__name">Michelle Appleton</div>
+          <div class="author__date">28 Jun 2020</div>
+        </div>
+      </div>
+    </div>
+ 
+  </div><!-- /card__content -->
+ 
+  <!-- Mobile share bar (shown only on mobile) -->
+  <div class="mobile-share-bar">
+    <span>Share</span>
+    <div class="icons">
+      <a href="#" aria-label="Facebook">
+        <img src="./images/icon-facebook.svg" alt="Facebook">
+      </a>
+      <a href="#" aria-label="Twitter">
+        <img src="./images/icon-twitter.svg" alt="Twitter">
+      </a>
+      <a href="#" aria-label="Pinterest">
+        <img src="./images/icon-pinterest.svg" alt="Pinterest">
+      </a>
+    </div>
+    <button class="share-btn-mobile" aria-label="Share">
+      <img src="./images/icon-share.svg" alt="Share Icon">
+    </button>
+  </div>
+ 
+</article>
+  
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Erdos Roland</a>.
+  </footer> 
+
+  <script src="./script.js"></script>
+</body>
+</html>
