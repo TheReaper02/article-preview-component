@@ -29,7 +29,7 @@ I built a responsive article preview card using semantic HTML, modern CSS (with 
 
 ## Screenshot
 
-![Project Output](images/project-output.png)
+![Project Output](project-output.png)
 
 ## Getting Started
 
