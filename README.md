@@ -1,7 +1,3 @@
-# Article Preview Component
-
-![Project Output](images/project-output.png)
-
 ## Overview
 
 This is a solution to the Frontend Mentor Article Preview Component Challenge.
